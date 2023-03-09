@@ -1,0 +1,7 @@
+.input_control {
+    height: 58px;
+}
+
+.input_control > input {
+    height: 58px;
+}

@@ -1,0 +1,91 @@
+.current_position {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.rover_current_pos {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.rover_current_pos_label {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.current_position {
+    text-align: center;
+}
+
+.app_heading {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tbl_plataeu {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    background-image: url("../../../../public/images/plateau.jpg");
+}
+
+.tbl_plataeu > tbody > tr {
+    height: auto;
+    width: auto;
+    max-width: 100px;
+    /* border: 1px solid black; */
+    min-height: 100px;
+    min-width: 100px;
+}
+
+.tbl_plataeu > tbody > tr > td {
+    width: 100px;
+    max-width: 100px;
+    border: 2px solid white;
+    color: white;
+    font-weight: 800;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tbl_plataeu > tbody > tr > td.rover_direction_n {
+    background-image: url("../../../../public/images/rover-n.png");
+}
+.tbl_plataeu > tbody > tr > td.rover_direction_s {
+    background-image: url("../../../../public/images/rover-s.png");
+}
+.tbl_plataeu > tbody > tr > td.rover_direction_e {
+    background-image: url("../../../../public/images/rover-e.png");
+}
+.tbl_plataeu > tbody > tr > td.rover_direction_w {
+    background-image: url("../../../../public/images/rover-w.png");
+}
+
+.current_position {
+    height: 58px;
+    padding-top: 18px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.details_row{
+    margin-bottom: 10px;
+}
+
+.current_position_text{
+    font-weight: bolder;
+}
