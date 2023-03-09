@@ -31,7 +31,6 @@ const MarsRover = () => {
     }
 
     function buttonClick(controlValue, totalControl) {
-        debugger;
         let roverPos = rovers;
         if (totalControl) {
             const control = totalControl[totalControl.length - 1];
@@ -241,9 +240,9 @@ const MarsRover = () => {
                         rovers={rovers}
                         supportText="Please enter command for rover to move in the plateau. \n
                 Example for commands below : \n
-                L : Turn the rover 90 degree left. \n
-                R : Turn the rover 90 degree right. \n
-                M : Move the rover forward one grid point and maintain the same heading.">
+                L : Turns the rover 90 degree left. \n
+                R : Turns the rover 90 degree right. \n
+                M : Moves the rover forward one grid point and maintain the same heading.">
                     </MultiCommand>
                 </Col>
                 <Col className="mb-3">
