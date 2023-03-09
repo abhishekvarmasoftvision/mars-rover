@@ -55,7 +55,7 @@ function MultiCommand(props) {
 
                         <Overlay target={target.current} show={show} placement="bottom">
                             {(props) => (
-                                <Tooltip id="overlay-example" {...props} html={true}>
+                                <Tooltip id="overlay-example" {...props}>
                                     <br></br>
                                     Your provided <strong>'{providedCommand}'</strong> is not a valid command.<br></br>
                                     <br></br>
@@ -64,6 +64,7 @@ function MultiCommand(props) {
                                     L : Turns the rover 90 degree left.<br></br>
                                     R : Turns the rover 90 degree right.<br></br>
                                     M : Moves the rover forward one grid point and maintain the same heading.
+                                    <br></br>
                                     <br></br>
                                 </Tooltip>
                             )}

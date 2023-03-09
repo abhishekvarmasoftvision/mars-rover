@@ -49,7 +49,14 @@ const MultiText = (props) => {
             let rover_co_Ordinates = initialPosition.split(' ');
             if (rover_co_Ordinates.length > 0) {
                 if (!isNaN(rover_co_Ordinates[0])) {
-                    setX_Axis(rover_co_Ordinates[0].trim());
+                    if (Number(rover_co_Ordinates[0].trim()) < props.xAxis) {
+                        setX_Axis(rover_co_Ordinates[0].trim());
+                    }
+                    else {
+                        setErrorText('Incorrect value for x-axis.')
+                        setX_Axis('');
+                        isValid = false;
+                    }
                 }
                 else {
                     setErrorText('Incorrect value for x-axis.')
@@ -63,7 +70,14 @@ const MultiText = (props) => {
 
             if (rover_co_Ordinates.length > 1) {
                 if (!isNaN(rover_co_Ordinates[1])) {
-                    setY_Axis(rover_co_Ordinates[1].trim());
+                    if (Number(rover_co_Ordinates[1].trim()) < props.xAxis) {
+                        setY_Axis(rover_co_Ordinates[1].trim());
+                    }
+                    else {
+                        setErrorText('Incorrect value for y-axis.')
+                        setY_Axis('');
+                        isValid = false;
+                    }
                 }
                 else {
                     setErrorText('Incorrect value for y-axis.')
@@ -111,6 +125,7 @@ const MultiText = (props) => {
 
     return (
         <>
+            {console.log(props)}
             <InputGroup className="mb-3 input_control">
                 <Form.Control
                     placeholder={props.placeholder}
@@ -133,11 +148,14 @@ const MultiText = (props) => {
             <Overlay target={target.current} show={show} placement="bottom">
                 {(props) => (
                     (errorText && errorText !== '') ?
-                        <Tooltip id="overlay-example" {...props} html={true}>
+                        <Tooltip id="overlay-example" {...props}>
+                            <br></br>
                             {`${errorText}`}
+                            <br></br>
+                            <br></br>
                         </Tooltip>
                         :
-                        <Tooltip id="overlay-example" {...props} html={true}>
+                        <Tooltip id="overlay-example" {...props}>
                             Initial Position of Rover :<br></br>
                             <br></br>
                             X-Axis : {x_Axis}<br></br>

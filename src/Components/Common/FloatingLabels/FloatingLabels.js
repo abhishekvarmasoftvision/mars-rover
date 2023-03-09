@@ -38,11 +38,14 @@ function FloatingControl(props) {
             <Overlay target={target.current} show={props.show} placement="bottom" >
                 {(props) => (
                     (errorText && errorText !== '') ?
-                        <Tooltip id="plateau_overlay" {...props} html={true}>
+                        <Tooltip id="plateau_overlay" {...props}>
+                            <br></br>
                             {`${errorText}`}
+                            <br></br>
+                            <br></br>
                         </Tooltip>
                         :
-                        <Tooltip id="overlay-example" {...props} html={true}>
+                        <Tooltip id="overlay-example" {...props}>
                             Plateau Size :<br></br>
                             <br></br>
                             X-Axis : {(xAxis) ? xAxis.length : 0}<br></br>

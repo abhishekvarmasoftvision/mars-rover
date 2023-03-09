@@ -217,7 +217,7 @@ const MarsRover = () => {
                         xAxis={xAxis}
                         yAxis={yAxis}
                     ></FloatingControl>
-
+                    {console.log(xAxis)}
                 </Col>
                 <Col>
                     <MultiText
@@ -227,6 +227,8 @@ const MarsRover = () => {
                         supportText="Please enter X and Y co-ordinate of rover's initial position along with it's direction seperated by space. Example: 2 1 N"
                         buttonClick={buttonClick}
                         buttonText="Add Rover"
+                        xAxis={xAxis.length}
+                        yAxis={yAxis.length}
                     ></MultiText>
                 </Col>
             </Row>
