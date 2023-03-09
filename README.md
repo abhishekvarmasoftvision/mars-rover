@@ -40,7 +40,6 @@ Assume that the square directly North from (x, y) is (x, y+1).
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
@@ -53,11 +52,15 @@ This section should list any major frameworks/libraries used to bootstrap your p
 ## Getting Started
 
 Instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+* nodejs
+  
+  Go to <a href="https://nodejs.org/en/">https://nodejs.org/en/</a> and install Latest version of node
+  
+
 * npm
   ```sh
   npm install npm@latest -g
@@ -65,22 +68,25 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
 1. Clone the repo
    ```sh
    git clone https://github.com/abhishekvarmasoftvision/mars-rover.git
    ```
+2. Navigate to root project using command prompt.
+
 3. Install NPM packages
    ```sh
    npm install
+   ```   
+4. Run project
+   ```sh
+   npm start
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- USAGE EXAMPLES -->
 ## Usage
 
 1. Provide the Plateau size by entering 2 numbers seperated by space. Example: 7 10, in this case it will create a table with 7 Rows and 10 columns.
