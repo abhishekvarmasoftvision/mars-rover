@@ -31,24 +31,24 @@ const MarsRover = () => {
     }
 
     function buttonClick(controlValue, totalControl) {
-        let roverPos = [];
+        debugger;
+        let roverPos = rovers;
         if (totalControl) {
-            totalControl.map(function (control, index) {
-                if (control) {
-                    let rover_co_Ordinates = control.roverPosition.split(' ');
+            const control = totalControl[totalControl.length - 1];
+            if (control) {
+                let rover_co_Ordinates = control.roverPosition.split(' ');
 
-                    if (rover_co_Ordinates.length === 3) {
-                        if (!isNaN(rover_co_Ordinates[0]) && !isNaN(rover_co_Ordinates[1]) && directions.indexOf(rover_co_Ordinates[2].toUpperCase()) > -1) {
-                            roverPos.push({
-                                roverXAxis: Number(rover_co_Ordinates[0].trim()),
-                                roverYAxis: Number(rover_co_Ordinates[1].trim()),
-                                roverDirection: rover_co_Ordinates[2].trim().toUpperCase()
-                            });
-                        }
+                if (rover_co_Ordinates.length === 3) {
+                    if (!isNaN(rover_co_Ordinates[0]) && !isNaN(rover_co_Ordinates[1]) && directions.indexOf(rover_co_Ordinates[2].toUpperCase()) > -1) {
+                        roverPos.push({
+                            roverXAxis: Number(rover_co_Ordinates[0].trim()),
+                            roverYAxis: Number(rover_co_Ordinates[1].trim()),
+                            roverDirection: rover_co_Ordinates[2].trim().toUpperCase()
+                        });
                     }
                 }
-                return true;
-            })
+            }
+
             setRovers(roverPos);
             setRoverCount(roverPos.length);
         }
@@ -222,10 +222,9 @@ const MarsRover = () => {
                 </Col>
                 <Col>
                     <MultiText
-                        controlId="plateau_size"
+                        controlId="rover_position"
                         placeholder="2 1 N"
-                        callParent={drawPlateau}
-                        textLabel="Enter Plateau size"
+                        textLabel="Please enter X and Y co-ordinate of rover's initial position along with it's direction seperated by space. Example: 2 1 N"
                         supportText="Please enter X and Y co-ordinate of rover's initial position along with it's direction seperated by space. Example: 2 1 N"
                         buttonClick={buttonClick}
                         buttonText="Add Rover"
