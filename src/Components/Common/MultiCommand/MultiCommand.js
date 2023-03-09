@@ -26,11 +26,13 @@ function MultiCommand(props) {
         setProvidedCommand(event.key.toUpperCase());
         if (allowedCommands.indexOf(event.key.toUpperCase()) > -1) {
             setShow(false);
+            setProvidedCommand('');
         }
         else {
             setShow(true);
         }
     }
+
     return (
         <>
             {props.rovers && props.rovers.map(function (control, index) {
